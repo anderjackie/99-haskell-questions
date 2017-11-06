@@ -1,0 +1,5 @@
+[1,2] ["aldo", "beat", "conor"]
+["aldo", ["beat", "conor"], "beat", ["aldo", "conor"], "conor", ["aldo", "beat"]]
+
+[2,1] ["aldo", "beat", "conor"]
+[["aldo", "beat"], ["conor"], ["beat", "aldo"], ["conor"], ["conor"], ["aldo", "beat"]]
