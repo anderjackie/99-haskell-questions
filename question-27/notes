@@ -1,5 +1,16 @@
-[1,2] ["aldo", "beat", "conor"]
-["aldo", ["beat", "conor"], "beat", ["aldo", "conor"], "conor", ["aldo", "beat"]]
-
-[2,1] ["aldo", "beat", "conor"]
-[["aldo", "beat"], ["conor"], ["beat", "aldo"], ["conor"], ["conor"], ["aldo", "beat"]]
+[2,2,3] ["a", "b", "c", "d", "e", "f", "g"]
+[["a", "b"], ["c", "d"], ["e", "f", "g"]]
+[["a", "b"], ["c", "e"], ["d", "f", "g"]]
+[["a", "b"], ["c", "f"], ["d", "e", "g"]]
+[["a", "b"], ["c", "g"], ["d", "e", "f"]]
+[["a", "b"], ["d", "e"], ["c", "f", "g"]]
+				.
+				.
+				.
+				.
+[["a", "c"], ["b", "d"], ["e", "f", "g"]]
+[["a", "c"], ["b", "e"], ["d", "f", "g"]]
+				.
+				.
+				.
+				.

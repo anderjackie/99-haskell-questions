@@ -1,6 +1,13 @@
-combination :: [Int] -> [String] -> [[String]]
-combination [n] l = [take n l]
-combination (n:ns) l = [take n l] ++ combination ns (drop n l)
+import qualified Data.List as L
 
-group :: [Int] -> [String] -> [[String]]
-group n l = [ (take i l) : j | i <- n, j <- (group n (drop i l)) ]
+combinations :: Int -> [a] -> [[a]]
+combinations 0 _ = [[]]
+combinations n l@(x:xs)
+	| n >= (length l) = [l]
+	| otherwise = [ x : i | i <- combinations (n - 1) xs ] ++ combinations n xs
+
+group :: (Eq a) => [Int] -> [a] -> [[[a]]]
+group [] l = [[[]]]
+group n [] = [[[]]]
+group [n] l =[combinations n l]
+group (n:ns) l = [i : j | i <- combinations n l, j <- group ns (l L.\\ i)]
